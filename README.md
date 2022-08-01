@@ -3,6 +3,7 @@
 
 
 ## どんなアプリ？
+![condition](https://user-images.githubusercontent.com/87169706/182144640-e79dc1ab-54ea-43fa-b6e6-81f5c1ac8083.gif)
 ## 経緯
 自分の体調は気圧に影響されるか興味があった。
 ## できること
