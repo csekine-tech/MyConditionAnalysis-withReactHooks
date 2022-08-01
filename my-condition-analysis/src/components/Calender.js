@@ -14,12 +14,13 @@ import "./Calender.css";
 import axios from "axios";
 
 let availableDateList = [];
-let data=[];
+let data = [];
 
 const Calender = () => {
   const conditionListCtx = useContext(ConditionListContext);
   const [ModalIsShown, setModalIsShown] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
+  // const [isLoading, setIsLoading] = useState(true);
   const formattedDate = (date) => {
     const newDate = new Date(date);
     let month = ("0" + (newDate.getMonth() + 1)).slice(-2);
@@ -50,7 +51,8 @@ const Calender = () => {
   }, [conditionListCtx]);
 
   const calenderRenderHandling = (e) => {
-    setAvailableDateListClass();
+    // setAvailableDateListClass();
+    // setIsLoading(false);
   };
 
   const handleDateClick = useCallback((e) => {
@@ -77,7 +79,7 @@ const Calender = () => {
   return (
     <>
       {ModalIsShown && (
-        <MyConditionModal onClose={hideModalHandler} date={selectedDate}/>
+        <MyConditionModal onClose={hideModalHandler} date={selectedDate} />
       )}
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
